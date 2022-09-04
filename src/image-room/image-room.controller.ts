@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 
-import { Body, Controller, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get,Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ImageDetails } from './dto/image-details';
 
@@ -23,4 +23,9 @@ export class ImageRoomController {
 
     };
 
+
+    @Get('hello')
+    getHello() {
+    return 'Hello, world!';
+  }
 }
